@@ -1,0 +1,28 @@
+.dashboard-page { display:flex; flex-direction:column; gap:24px; }
+.dash-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:4px; flex-wrap:wrap; gap:12px; }
+.dash-header h1 { font-size:28px; }
+.dash-header p { color:var(--text-muted); font-size:14px; margin-top:4px; }
+
+.stats-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+@media (max-width:1000px) { .stats-grid { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:600px)  { .stats-grid { grid-template-columns:1fr; } }
+
+.dash-row { display:grid; grid-template-columns:1.5fr 1fr; gap:24px; }
+@media (max-width:900px) { .dash-row { grid-template-columns:1fr; } }
+
+.chart-card h3, .status-card h3 { font-family:'DM Sans',sans-serif; font-size:16px; font-weight:600; margin-bottom:20px; }
+
+.status-list { display:flex; flex-direction:column; gap:14px; }
+.status-item { display:grid; grid-template-columns:10px 1fr 30px 80px; align-items:center; gap:10px; font-size:14px; }
+.status-dot { width:10px; height:10px; border-radius:50%; }
+.status-bar-wrap { height:6px; background:var(--border); border-radius:3px; overflow:hidden; }
+.status-bar { height:100%; border-radius:3px; transition:width 0.8s ease; }
+
+.quick-actions { display:flex; gap:8px; flex-wrap:wrap; }
+.quick-btn {
+  display:inline-flex; align-items:center; gap:6px;
+  padding:8px 14px; border-radius:8px; font-size:13px;
+  color:var(--text-muted); text-decoration:none;
+  background:var(--bg); border:1px solid var(--border); transition:all 0.2s;
+}
+.quick-btn:hover { background:var(--primary); color:white; border-color:var(--primary); }

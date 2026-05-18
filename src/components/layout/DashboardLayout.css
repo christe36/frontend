@@ -1,0 +1,14 @@
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+.dashboard-main {
+  margin-left: var(--sidebar-w);
+  flex: 1;
+  padding: 32px;
+  min-height: 100vh;
+  animation: fadeIn 0.4s ease;
+}
+@media (max-width: 768px) {
+  .dashboard-main { margin-left: 0; padding: 16px; }
+}
